@@ -1,7 +1,9 @@
 name: rotation_stage
 description: A four-sided stage for representing 3D objects with four widgets
 version: 0.0.1
-homepage:
+homepage: https://www.fyzo.de
+repository: https://github.com/fyzio/rotation_stage
+issue_tracker: https://github.com/fyzio/rotation_stage/issues
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
