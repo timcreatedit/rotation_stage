@@ -1,3 +1,7 @@
+# rotation_stage
+
+![Demo GIF](https://raw.githubusercontent.com/fyzio/rotation_stage/main/example/demo.gif)
+
 A simple and beautiful way to display a four sided widget with a basic 3D effect.
 
 ## Usage
