@@ -4,12 +4,11 @@ import 'package:rotation_stage/src/const/scroll_start_page.dart';
 class RotationStageController extends ValueNotifier<double> {
   RotationStageController({
     this.viewportFraction = 0.2,
-    int initialPage = kInfiniteScrollStartPage,
   })  : pageController = PageController(
-          initialPage: initialPage,
+          initialPage: kInfiniteScrollStartPage,
           viewportFraction: viewportFraction,
         ),
-        super(initialPage.toDouble()) {
+        super(kInfiniteScrollStartPage.toDouble()) {
     pageController.addListener(() {
       if (pageController.positions.isNotEmpty && pageController.page != null) {
         value = pageController.page!;
