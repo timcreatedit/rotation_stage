@@ -8,6 +8,7 @@ export 'src/rotation_stage_bar.dart';
 export 'src/rotation_stage_content.dart';
 export 'src/rotation_stage_controller.dart';
 export 'src/rotation_stage_handle.dart';
+export 'src/rotation_stage_labels.dart';
 
 typedef RotationStageBuilder = Widget Function(
     int index, RotationStageSide side, double currentPage);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rotation_stage/src/model/rotation_stage_side.dart';
-import 'package:rotation_stage/src/rotation_stage_localization.dart';
+import 'package:rotation_stage/src/rotation_stage_labels.dart';
 
 class RotationStageHandle extends StatelessWidget {
   const RotationStageHandle({
