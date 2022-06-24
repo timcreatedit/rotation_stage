@@ -39,9 +39,9 @@ class RotationStageLabels extends InheritedWidget {
   final RotationStageLabelData data;
 
   static RotationStageLabelData of(context) {
-    final RotationStageLabelData? result =
-        context.dependOnInheritedWidgetOfExactType<RotationStageLabelData>();
-    return result ?? RotationStageLabelData.english;
+    final RotationStageLabels? result =
+        context.dependOnInheritedWidgetOfExactType<RotationStageLabels>();
+    return result?.data ?? RotationStageLabelData.english;
   }
 
   @override
