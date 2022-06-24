@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rotation_stage/src/model/rotation_stage_side.dart';
+import 'package:rotation_stage/src/rotation_stage_labels.dart';
 
 class RotationStageHandle extends StatelessWidget {
   const RotationStageHandle({
@@ -15,18 +16,11 @@ class RotationStageHandle extends StatelessWidget {
   final bool backgroundTransparent;
   final VoidCallback onTap;
 
-  //TODO localize
-  final List<String> names = const [
-    "Front",
-    "Left",
-    "Back",
-    "Right",
-  ];
-
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final name = names[side.index];
+    final labels = RotationStageLabels.of(context);
+    final name = labels.getForSide(side);
     return Center(
       child: ChoiceChip(
         onSelected: (_) => onTap(),
