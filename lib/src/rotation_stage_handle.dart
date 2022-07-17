@@ -53,7 +53,7 @@ class RotationStageHandle extends StatelessWidget {
             : inactiveBackgroundColor ?? colorScheme.primaryContainer,
         selectedColor: backgroundTransparent
             ? Colors.transparent
-            : activeBackgroundColor ?? colorScheme.onPrimary,
+            : activeBackgroundColor ?? colorScheme.primary,
       ),
     );
   }
