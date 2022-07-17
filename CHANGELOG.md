@@ -1,3 +1,7 @@
+## 0.0.4
+* Fixed handle color
+* Allow custom handle colors
+
 ## 0.0.3
 * Added support for localization or custom labels via inherited widget
 ## 0.0.2

@@ -9,12 +9,21 @@ class RotationStageHandle extends StatelessWidget {
     required this.active,
     required this.onTap,
     required this.backgroundTransparent,
+    this.activeForegroundColor,
+    this.inactiveForegroundColor,
+    this.activeBackgroundColor,
+    this.inactiveBackgroundColor,
   });
 
   final RotationStageSide side;
   final bool active;
   final bool backgroundTransparent;
   final VoidCallback onTap;
+
+  final Color? activeForegroundColor;
+  final Color? inactiveForegroundColor;
+  final Color? activeBackgroundColor;
+  final Color? inactiveBackgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,21 +37,23 @@ class RotationStageHandle extends StatelessWidget {
           name.toUpperCase(),
           style: Theme.of(context).textTheme.button?.copyWith(
                 color: active
-                    ? colorScheme.onSecondary
-                    : colorScheme.onSecondaryContainer,
+                    ? activeForegroundColor ?? colorScheme.onPrimary
+                    : inactiveForegroundColor ?? colorScheme.onPrimaryContainer,
               ),
         ),
         selected: active,
         disabledColor: Colors.transparent,
         shadowColor:
             backgroundTransparent ? Colors.transparent : colorScheme.shadow,
-        selectedShadowColor:
-            backgroundTransparent ? Colors.transparent : colorScheme.primary,
+        selectedShadowColor: backgroundTransparent
+            ? Colors.transparent
+            : activeBackgroundColor ?? colorScheme.primary,
         backgroundColor: backgroundTransparent
             ? Colors.transparent
-            : colorScheme.primaryContainer,
-        selectedColor:
-            backgroundTransparent ? Colors.transparent : colorScheme.primary,
+            : inactiveBackgroundColor ?? colorScheme.primaryContainer,
+        selectedColor: backgroundTransparent
+            ? Colors.transparent
+            : activeBackgroundColor ?? colorScheme.onPrimary,
       ),
     );
   }
