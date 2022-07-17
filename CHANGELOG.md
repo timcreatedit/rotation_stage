@@ -1,3 +1,6 @@
+## 0.0.5
+* Fixed handle color
+
 ## 0.0.4
 * Fixed handle color
 * Allow custom handle colors
