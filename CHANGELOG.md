@@ -1,3 +1,6 @@
+## 0.0.6
+* lint dependency
+
 ## 0.0.5
 * Fixed handle color
 
