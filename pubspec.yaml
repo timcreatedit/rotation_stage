@@ -1,6 +1,6 @@
 name: rotation_stage
 description: A four-sided stage for representing 3D objects with four widgets
-version: 0.0.5
+version: 0.0.6
 homepage: https://www.fyzo.de
 repository: https://github.com/fyzio/rotation_stage
 issue_tracker: https://github.com/fyzio/rotation_stage/issues
@@ -16,7 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
