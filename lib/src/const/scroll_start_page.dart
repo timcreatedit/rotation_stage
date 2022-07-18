@@ -1,1 +1,1 @@
-const int kInfiniteScrollStartPage = 10000;
+const int kInfiniteScrollStartPage = 500;

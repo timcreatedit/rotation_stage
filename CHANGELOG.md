@@ -1,3 +1,6 @@
+## 0.0.7
+* smaller start page to prevent exception
+
 ## 0.0.6
 * lint dependency
 
