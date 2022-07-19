@@ -30,31 +30,29 @@ class RotationStageHandle extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final labels = RotationStageLabels.of(context);
     final name = labels.getForSide(side);
-    return Center(
-      child: ChoiceChip(
-        onSelected: (_) => onTap(),
-        label: Text(
-          name.toUpperCase(),
-          style: Theme.of(context).textTheme.button?.copyWith(
-                color: active
-                    ? activeForegroundColor ?? colorScheme.onPrimary
-                    : inactiveForegroundColor ?? colorScheme.onPrimaryContainer,
-              ),
-        ),
-        selected: active,
-        disabledColor: Colors.transparent,
-        shadowColor:
-            backgroundTransparent ? Colors.transparent : colorScheme.shadow,
-        selectedShadowColor: backgroundTransparent
-            ? Colors.transparent
-            : activeBackgroundColor ?? colorScheme.primary,
-        backgroundColor: backgroundTransparent
-            ? Colors.transparent
-            : inactiveBackgroundColor ?? colorScheme.primaryContainer,
-        selectedColor: backgroundTransparent
-            ? Colors.transparent
-            : activeBackgroundColor ?? colorScheme.primary,
+    return ChoiceChip(
+      onSelected: (_) => onTap(),
+      label: Text(
+        name.toUpperCase(),
+        style: Theme.of(context).textTheme.button?.copyWith(
+              color: active
+                  ? activeForegroundColor ?? colorScheme.onPrimary
+                  : inactiveForegroundColor ?? colorScheme.onPrimaryContainer,
+            ),
       ),
+      selected: active,
+      disabledColor: Colors.transparent,
+      shadowColor:
+          backgroundTransparent ? Colors.transparent : colorScheme.shadow,
+      selectedShadowColor: backgroundTransparent
+          ? Colors.transparent
+          : activeBackgroundColor ?? colorScheme.primary,
+      backgroundColor: backgroundTransparent
+          ? Colors.transparent
+          : inactiveBackgroundColor ?? colorScheme.primaryContainer,
+      selectedColor: backgroundTransparent
+          ? Colors.transparent
+          : activeBackgroundColor ?? colorScheme.primary,
     );
   }
 }
