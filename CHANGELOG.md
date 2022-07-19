@@ -1,3 +1,6 @@
+## 0.0.8
+* removed unnecessary center from handle
+* 
 ## 0.0.7
 * smaller start page to prevent exception
 
