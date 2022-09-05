@@ -1,6 +1,11 @@
+## 0.1.0
+* Adjusted chips for Flutter 3.3
+## 0.0.9
+* added center to bar
+
 ## 0.0.8
 * removed unnecessary center from handle
-* 
+
 ## 0.0.7
 * smaller start page to prevent exception
 

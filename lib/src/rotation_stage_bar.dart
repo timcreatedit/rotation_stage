@@ -34,15 +34,17 @@ class RotationStageBar extends StatelessWidget {
           itemBuilder: (context, index) {
             final offset = (page - index).abs().clamp(0, visOffset) / visOffset;
             final opacity = lerpDouble(minHandleOpacity, 1, 1 - offset);
-            return Opacity(
-              opacity: Curves.ease.transform(opacity!),
-              child: AnimatedOpacity(
-                duration: kThemeAnimationDuration,
-                opacity: interactable && index != index ? 0 : 1,
-                child: viewHandleBuilder(
-                  index,
-                  RotationStageSide.forIndex(index),
-                  page,
+            return Center(
+              child: Opacity(
+                opacity: Curves.ease.transform(opacity!),
+                child: AnimatedOpacity(
+                  duration: kThemeAnimationDuration,
+                  opacity: interactable && index != index ? 0 : 1,
+                  child: viewHandleBuilder(
+                    index,
+                    RotationStageSide.forIndex(index),
+                    page,
+                  ),
                 ),
               ),
             );

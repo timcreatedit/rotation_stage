@@ -30,7 +30,8 @@ class RotationStageHandle extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final labels = RotationStageLabels.of(context);
     final name = labels.getForSide(side);
-    return ChoiceChip(
+    return RawChip(
+      showCheckmark: false,
       onSelected: (_) => onTap(),
       label: Text(
         name.toUpperCase(),
